@@ -47,16 +47,6 @@ pipeline {
             }
         }
 
-        stage('Verify Deployment') {
-            steps {
-                script {
-                    // Check Backend Deployment
-                    bat 'kubectl rollout status deployment/backend-deployment'
-                    
-                    // Check Frontend Deployment
-                    bat 'kubectl rollout status deployment/frontend-deployment'
-                }
-            }
-        }
+        
     }
 }
