@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout SCM') {
             steps {
-                git branch: 'main', url: 'https://github.com/AshwiniSrin/IBM_PROJECT.git'
+                git branch: 'main', url: 'https://github.com/KunuthuruDeepika/IBM_PROJECT.git'
             }
         }
 
@@ -19,14 +19,14 @@ pipeline {
                         
                         // Build and push Backend image
                         dir('Backend') {
-                            bat 'docker build -t ashwini9535/backend:latest .'
-                            bat 'docker push ashwini9535/backend:latest'
+                            bat 'docker build -t deepu15/backend:latest .'
+                            bat 'docker push deepu15/backend:latest'
                         }
                         
                         // Build and push Frontend image
                         dir('Frontend') {
-                            bat 'docker build -t ashwini9535/frontend:latest .'
-                            bat 'docker push ashwini9535/frontend:latest'
+                            bat 'docker build -t deepu15/frontend:latest .'
+                            bat 'docker push deepu15/frontend:latest'
                         }
                     }
                 }
